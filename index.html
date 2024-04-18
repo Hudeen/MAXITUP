@@ -8,16 +8,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&family=Russo+One&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&family=Russo+One&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&family=Play:wght@400;700&family=Russo+One&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&family=Play:wght@400;700&family=Russo+One&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>MAXITUP</title>
 </head>
@@ -25,17 +19,30 @@
 <body>
 
     <div class="backgroud-gif"></div>
-    <header class="">
+    <header>
         <div class="logo desktop"><a>MAXITUP</a></div>
         <nav>
             <div class="logo mobile"><a>MAXITUP</a></div>
             <div class="sub-menu">
-                <a>Главная</a>
-                <a>В тренде</a>
-                <a>Поддержка</a>
-                <a>О нас</a>
+                <div class="finder">
+                    <img style="width: 18px" src="./find.svg"/>
+                </div>
+
+                <a class="sub-menu__link">Главная</a>
+                <a class="sub-menu__link">Каталог</a>
+                <a class="sub-menu__link">Поддержка</a>
+                <a class="sub-menu__link">О нас</a>
+
+                <a class="profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 20" id="profile"><g fill="none" fill-rule="evenodd"><g fill="#000" transform="translate(-180 -2159)"><g transform="translate(56 160)"><path d="M134 2009c-2.217 0-4.019-1.794-4.019-4s1.802-4 4.019-4 4.019 1.794 4.019 4-1.802 4-4.019 4m3.776.673a5.978 5.978 0 0 0 2.182-5.603c-.397-2.623-2.589-4.722-5.236-5.028-3.652-.423-6.75 2.407-6.75 5.958 0 1.89.88 3.574 2.252 4.673-3.372 1.261-5.834 4.222-6.22 8.218a1.012 1.012 0 0 0 1.004 1.109.99.99 0 0 0 .993-.891c.403-4.463 3.836-7.109 7.999-7.109s7.596 2.646 7.999 7.109a.99.99 0 0 0 .993.891c.596 0 1.06-.518 1.003-1.109-.385-3.996-2.847-6.957-6.22-8.218"></path></g></g></g></svg>
+                    <span>Профиль</span>
+                </a>
             </div>
             <div class="link mobile">
+                <a class="profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 20" id="profile"><g fill="none" fill-rule="evenodd"><g fill="#000" transform="translate(-180 -2159)"><g transform="translate(56 160)"><path d="M134 2009c-2.217 0-4.019-1.794-4.019-4s1.802-4 4.019-4 4.019 1.794 4.019 4-1.802 4-4.019 4m3.776.673a5.978 5.978 0 0 0 2.182-5.603c-.397-2.623-2.589-4.722-5.236-5.028-3.652-.423-6.75 2.407-6.75 5.958 0 1.89.88 3.574 2.252 4.673-3.372 1.261-5.834 4.222-6.22 8.218a1.012 1.012 0 0 0 1.004 1.109.99.99 0 0 0 .993-.891c.403-4.463 3.836-7.109 7.999-7.109s7.596 2.646 7.999 7.109a.99.99 0 0 0 .993.891c.596 0 1.06-.518 1.003-1.109-.385-3.996-2.847-6.957-6.22-8.218"></path></g></g></g></svg>
+                    <span>Профиль</span>
+                </a>
                 <div class="burger"><span></span><span></span><span></span></div>
             </div>
         </nav>
@@ -293,19 +300,7 @@
             </div>
         </div>
     </main>
-    <script>
-        document.querySelector('.burger').addEventListener('click', function () {
-            document.querySelector('.sub-menu').classList.toggle('active');
-            document.querySelector('header').classList.toggle('active');
-        });
-
-        $(".card__item").on('click', function () {
-            $(".custom-model-main").addClass('model-open');
-        });
-        $(".close-btn, .bg-overlay").click(function () {
-            $(".custom-model-main").removeClass('model-open');
-        });
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
